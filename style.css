@@ -1,0 +1,172 @@
+:root {
+  --title-color: #333;
+  --paragraph-color: #4F4F4F;
+  --white-text: #fff;
+  --footer-color: #BDBDBD;
+  --font-404: 'Inconsolata', monospace;
+  --font-general: 'Space Mono', monospace;
+  --font-footer: 'Montserrat', sans-serif;
+}
+
+/* ********** Reset ********** */
+html {
+  box-sizing: border-box;
+  font-family: var(--font-general);
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+h5 {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 0.7rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/********Container********/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1260px;
+  min-width: 360px;
+  min-height: 88vh;
+}
+
+/********Header********/
+header p {
+  margin-top: 1.25rem;
+  margin-left: 1.5rem;
+  width: 133px;
+  height: 25px;
+  font-family: var(--font-404);
+}
+
+/********Image********/
+.left-content {
+  aspect-ratio: 16/9;
+}
+
+/********Title********/
+.right-content h1 {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+  width: 350px;
+  font-family: var(--font-general);
+  font-size: 47px;
+  font-weight: 700;
+  color: var(--title-color);
+}
+
+/********Paragraph********/
+.right-content p {
+  width: 328px;
+  height: 81px;
+  line-height: 26.66px;
+  font-size: 18px;
+  font-family: var(--font-general);
+  font-weight: 400;
+  color: var(--paragraph-color);
+}
+
+/********Button********/
+.right-content button {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: none;
+  font-family: var(--font-general);
+  color: var(--white-text);
+  background-color: var(--title-color);
+}
+
+/********Footer********/
+.footer-content>p {
+  text-align: center;
+  font-family: var(--font-footer);
+  color: var(--footer-color);
+  font-size: 14px;
+}
+
+@media screen and (min-width: 48em) {
+  .container {
+    min-height: 90vh;
+  }
+
+  .left-content {
+    max-width: 600px;
+  }
+
+  .right-content h1 {
+    margin-top: 17rem;
+  }
+
+  .right-content button {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+    min-height: 82vh;
+  }
+
+  .right-content h1 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: 38px;
+  }
+
+  .left-content {
+    max-width: 500px;
+  }
+
+  .right-content {
+    margin-left: 10rem;
+  }
+
+  .right-content p {
+    font-size: 20px;
+  }
+}
